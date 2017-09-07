@@ -1,13 +1,8 @@
-(function($){
-  $(function(){
+$('.button-collapse').sideNav({
+    closeOnClick: true
+});
 
-    $('.button-collapse').sideNav({
-	    closeOnClick: true
-    });
-    $('.parallax').parallax();
-
-  }); // end of document ready
-})(jQuery); // end of jQuery name space
+$('.parallax').parallax();
 
 $('#formContacto').ajaxForm({
     beforeSend: function() {
@@ -37,6 +32,36 @@ $('#formContacto').ajaxForm({
         }
         
     }
+
 });
   
-    
+$("#owl-demo").owlCarousel({
+      navigation : false,
+      slideSpeed : 300,
+      paginationSpeed : 400,
+      singleItem : true,
+      autoPlay : true
+});
+
+$("#owl-demo2").owlCarousel({
+  autoPlay: 3000, //Set AutoPlay to 3 seconds
+  navigation : false,
+  items : 1
+});
+
+$("#owl-demo3").owlCarousel({
+  autoPlay: 3000, //Set AutoPlay to 3 seconds
+  navigation : false,
+  items : 8,
+  itemsDesktop : [1199,3],
+  itemsDesktopSmall : [979,3],
+  itemsMobile : [479,3],
+});
+
+$("#owl-demo4").owlCarousel({
+  autoPlay: 3000, //Set AutoPlay to 3 seconds
+  navigation : true,
+      singleItem : true,
+});
+
+$('.scrollspy').scrollSpy();
