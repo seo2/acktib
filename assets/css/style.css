@@ -3,7 +3,7 @@
   margin-top: -100px;
 }
 
-#asi_trabajamos, #productos_servicios, #cloud_outsourcing, #ingenieria_y_consultoria  { 
+#asi_trabajamos, #productos_servicios, #cloud_outsourcing, #ingenieria_y_consultoria  {
 	background: #f0f0f0;
 }
 
@@ -535,7 +535,7 @@ nav .input-field label.active {
 		text-align: center;
 		margin-top: 20px;
 	}
-	
+
 	.beneficio_icono {
 		float: none;
 		font-size: 60px;
@@ -551,7 +551,7 @@ nav .input-field label.active {
 		color: #454545;
 		display: block;
 	}
-	
+
 	.beneficio_titulo {
 		display: block;
 		font-weight: 700;
@@ -562,7 +562,7 @@ nav .input-field label.active {
 	  display: block;
 		font-weight: 400;
 	}
-  
+
 }
 
 .btn_orange:hover {
@@ -661,7 +661,7 @@ h5.sub_titulos {
   .banner_clientes_foto img {
   	width: 300px;
   }
-  
+
 	.datos, .experiencia {
 		margin-top: 0px;
 }
@@ -696,7 +696,7 @@ footer.page-footer a {
 }
 
 footer.page-footer a:hover {
-  color: 
+  color:
 }
 
 footer.page-footer .footer-copyright {
@@ -768,9 +768,17 @@ footer.page-footer .footer-copyright {
 }
 .intro{overflow: hidden;}
 #owl-demo4{height: 100%;}
-.carouselitem{position: relative; height: 100%; width: 100%; display: table;}
-.slidertext{position: relative; width: 100%; z-index: 10;display: table-cell; vertical-align: middle;}
-.carouselitem img{ width: 100%; position: absolute; top: 0; left: 0;}
+.carouselitem{position: relative; height: 100%; width: 100%; /*display: table;*/}
+.slidertext{/*position: relative; width: 100%; z-index: 10;display: table-cell; vertical-align: middle;*/
+  position: absolute;
+  top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        width: 80%;
+        }
+.carouselitem img{ width: 100%;/* position: absolute; top: 0; left: 0;*/}
 .owl-controls{ position: absolute; bottom: -30px; z-index: 10; width: 100%;}
 #owl-demo4.owl-carousel  .owl-wrapper, .owl-carousel  .owl-item{height: 100%;}
 #owl-demo4.owl-theme .owl-controls .owl-page span{background: #fc9f00;}

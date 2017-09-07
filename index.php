@@ -2,26 +2,26 @@
 
 	<div id="portada" class="intro scrollspy">
 		<div id="owl-demo4" class="owl-carousel owl-theme">
-<?php
-			$args = array(
-				'post_type'	=> array('slider_portada')
-			);
-            $query = new WP_Query( $args ); 
-			if ( $query->have_posts() ) {
-				while ( $query->have_posts() ) : $query->the_post();	
-?>					
+		<?php
+					$args = array(
+						'post_type'	=> array('slider_portada')
+					);
+		            $query = new WP_Query( $args );
+					if ( $query->have_posts() ) {
+						while ( $query->have_posts() ) : $query->the_post();
+		?>
 			<div class="carouselitem">
-				<div class="slidertext">
-                	<h1 class="brand-heading"><?php the_title(); ?></h1>
-					<p class="intro-text"><?php echo get('bajada'); ?></p>
-				</div>
-                <?php the_post_thumbnail('full',array( 'class' => 'responsive-img hidden-xs' ) ); ?> 
-                <?php the_post_thumbnail('slider_mobile',array( 'class' => 'responsive-img visible-xs' ) ); ?> 
+				 	<div class="slidertext">
+	                	<h1 class="brand-heading"><?php the_title(); ?></h1>
+										<p class="intro-text"><?php echo get('bajada'); ?></p>
+					</div>
+                <?php the_post_thumbnail('full',array( 'class' => 'responsive-img hide-on-small-only' ) ); ?>
+               <?php the_post_thumbnail('slider_mobile',array( 'class' => 'responsive-img show-on-small' ) ); ?>
 			</div>
-<?php 		
-        endwhile; 
-  } 
-?>	
+		<?php
+		        endwhile;
+		  }
+		?>
 		</div>
 	</div><!-- /portada -->
 
@@ -33,7 +33,7 @@
 					    <h4 class="titulos">Lo que hacemos</h4>
 					</div>
 				</div>
-				
+
 				<div class="row">
 					<a class="col s12 m3 hoverable page-scroll" href="#cloud_outsourcing">
 						<div class="servicio">
@@ -44,18 +44,18 @@
 			        		</div>
 						</div><!-- /servicio -->
 					</a>
-		
+
 					<a class="col s12 m3 hoverable page-scroll" href="#control_y_gestionTI">
 				        <div class="servicio">
 					        <i class="material-icons servicio_icono">show_chart</i>
 				        	<div class="servicio_content">
 				          		<span class="servicio_titulo">Control y Gestión TI</span>
 				          		<span class="servicio_info">Controle y asegure sus procesos TI.  Revise como se alinean y aportan a los objetivos de su negocio. Hágalos parte del crecimiento global de su empresa.</span>
-			        			
+
 				        	</div>
 				        </div><!-- /servicio -->
 					</a>
-		
+
 					<a class="col s12 m3 hoverable page-scroll" href="#ingenieria_y_consultoria">
 				        <div class="servicio">
 					        <i class="material-icons servicio_icono">functions</i>
@@ -65,18 +65,18 @@
 				        					        	</div>
 				        </div><!-- /servicio -->
 					</a>
-						
+
 					<a class="col s12 m3 hoverable page-scroll" href="#soporte">
 				        <div class="servicio">
 					        <i class="material-icons servicio_icono">assignment_turned_in</i>
 				        	<div class="servicio_content">
 				          	<span class="servicio_titulo">Soporte</span>
 				          	<span class="servicio_info">Nos encargamos  de sus sistemas y apoyamos a su departamento TI cuando lo requiera. Esto nos permite dar continuidad a su negocio.<br><br></span>
-				        	
+
 				        	</div>
 				        </div><!-- /servicio -->
 					</a>
-		
+
 				</div><!-- /row -->
 					<div class="row">
 			    	<div class="col s12 center">
@@ -122,7 +122,7 @@
 	        </div>
 	        </div><!-- /beneficio -->
         </div>
-        
+
 	      <div class="col s12 m4">
 		      <div class="beneficio">
 			<div class="col s12 m3">
@@ -137,7 +137,7 @@
 	        </div>
 	      </div>
     </div><!-- /row -->
-    
+
     <div class="row">
 
       <div class="col s12 m4">
@@ -182,8 +182,8 @@
         </div><!-- /beneficio -->
 			</div>
     </div><!-- /row -->
-    
-    
+
+
   </div><!-- /section -->
   </div><!-- /beneficios -->
 
@@ -320,7 +320,7 @@
 			</div>
 		</div><!-- /section -->
 	</div><!-- /soporte -->
-  
+
 	<div id="asi_trabajamos">
 	    <div class="section">
 		    <div class="row">
@@ -329,7 +329,7 @@
  <div class="col s12 center">
 					    <h4 class="sub_titulos">ASÍ TRABAJAMOS</h4>
 				    </div>
-					
+
 -->
 					<div class="col s12 m10 offset-m1">
 						<div class="row">
@@ -337,21 +337,21 @@
 			$args = array(
 				'page_id'	=> 11
 			);
-            $query = new WP_Query( $args ); 
+            $query = new WP_Query( $args );
 			if ( $query->have_posts() ) {
-				while ( $query->have_posts() ) : $query->the_post();	
-?>	
+				while ( $query->have_posts() ) : $query->the_post();
+?>
 							<div class="col s12 l6">
 							    <h4 class="sub_titulos"><?php the_title(); ?></h4>
 							    <div class="textos2">
 							    	<?php the_content(); ?>
 							    </div>
-						    </div>		
-<?php 		
-        endwhile; 
-  } 
-?>			    
-						    
+						    </div>
+<?php
+        endwhile;
+  }
+?>
+
 						    <div class="col s12 m6 center">
 								<div id="owl-demo2" class="owl-carousel owl-theme">
 									<div class="item">
@@ -365,7 +365,7 @@
 						    	</div>
 						    </div>
 						</div>
-					</div>	
+					</div>
 			    </div>
 		    </div>
 	  </div><!-- /section -->
@@ -384,13 +384,13 @@
 			$args = array(
 				'post_type'	=> array('testimonio')
 			);
-            $query = new WP_Query( $args ); 
+            $query = new WP_Query( $args );
 			if ( $query->have_posts() ) {
-				while ( $query->have_posts() ) : $query->the_post();	
-?>	
+				while ( $query->have_posts() ) : $query->the_post();
+?>
 				    <div class="banner_clientes container">
 					    	<div class="col s6 offset-s3 m2 banner_clientes_foto center">
-								<?php the_post_thumbnail('full',array( 'class' => 'responsive-img' ) ); ?> 
+								<?php the_post_thumbnail('full',array( 'class' => 'responsive-img' ) ); ?>
 							</div>
 						    <div class="col s12 m4 datos">
 							    <h4 class="cliente_nombre"><?php echo get('cliente_nombre'); ?></h4>
@@ -401,10 +401,10 @@
 							    <?php the_content(); ?>
 						    </div>
 				    </div>
-<?php 		
-        endwhile; 
-  } 
-?>	
+<?php
+        endwhile;
+  }
+?>
 				  </div><!-- /owl-demo -->
 	      </div><!-- /row -->
 	      <div class="row logos-clientes">
@@ -417,19 +417,19 @@
 				'orderby' => 'title',
 				'order' => 'ASC'
 			);
-            $query = new WP_Query( $args ); 
+            $query = new WP_Query( $args );
 			if ( $query->have_posts() ) {
-				while ( $query->have_posts() ) : $query->the_post();	
-?>	
+				while ( $query->have_posts() ) : $query->the_post();
+?>
 						<div class="col s4 center-align">
-							<?php the_post_thumbnail('full',array( 'class' => 'responsive-img' ) ); ?> 
+							<?php the_post_thumbnail('full',array( 'class' => 'responsive-img' ) ); ?>
 						</div>
-<?php 		
-        endwhile; 
-  } 
-?>	
+<?php
+        endwhile;
+  }
+?>
 		      		</div>
-		      </div>  
+		      </div>
 	      </div><!-- /row -->
     </div><!-- /section -->
   </div><!-- /clientes -->
@@ -437,15 +437,15 @@
 	<div class="parallax-container valign-wrapper">
     <div class="section no-pad">
       <div class="container valign">
-        
+
         <h1 class="titulos_blancos ">Atención personalizada</h1>
         <p class="textos_blancos">Cara a Cara con el cliente.  Acceso directo con los especialistas</p>
-        
+
       </div>
     </div>
     <div class="parallax"><img src="<? bloginfo('template_url'); ?>/assets/img/background1.jpg" alt="Unsplashed background img 1"></div>
   </div><!-- /parallax-container -->
- 	
+
 	<div id="alianzas_estrategicas">
     	<div class="section">
 	    <div class="container">
@@ -461,17 +461,17 @@
 				'orderby' => 'title',
 				'order' => 'ASC'
 			);
-            $query = new WP_Query( $args ); 
+            $query = new WP_Query( $args );
 			if ( $query->have_posts() ) {
-				while ( $query->have_posts() ) : $query->the_post();	
-?>				
+				while ( $query->have_posts() ) : $query->the_post();
+?>
 				<div class="col m3">
-					<?php the_post_thumbnail('full',array( 'class' => 'responsive-img' ) ); ?> 
+					<?php the_post_thumbnail('full',array( 'class' => 'responsive-img' ) ); ?>
 				</div>
-<?php 		
-        endwhile; 
-  } 
-?>					
+<?php
+        endwhile;
+  }
+?>
 			</div><!-- /col -->
 	    </div><!-- /row -->
 	    </div><!-- /container -->

@@ -18,23 +18,23 @@ $('#formContacto').ajaxForm({
     },
     complete: function(xhr) {
 		$('#btnEnviar').html('Enviado!');
-		
+
 		$('#formContacto')[0].reset();
-		
+
         var respuesta = xhr.responseText;
         console.log(respuesta);
         if(respuesta=='ok'){
-				        
+
         }else if(respuesta=='error1'){
 	        //swal("Ha ocurrido un error", "El archivo subido excede el limite de 10mb permitido.", "error");
 	    }else{
 	        //swal("Ha ocurrido un error", "Por favor vuelve a intentarlo", "error");
         }
-        
+
     }
 
 });
-  
+
 $("#owl-demo").owlCarousel({
       navigation : false,
       slideSpeed : 300,
@@ -58,10 +58,18 @@ $("#owl-demo3").owlCarousel({
   itemsMobile : [479,3],
 });
 
+// carousel home
 $("#owl-demo4").owlCarousel({
-  autoPlay: 3000, //Set AutoPlay to 3 seconds
+  autoPlay: 3000,
   navigation : true,
-      singleItem : true,
+  singleItem : true,
 });
 
 $('.scrollspy').scrollSpy();
+
+
+
+
+
+
+
